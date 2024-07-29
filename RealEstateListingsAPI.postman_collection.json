@@ -1,0 +1,189 @@
+{
+    "info": {
+        "name": "Real Estate Listings API",
+        "_postman_id": "12345678-1234-1234-1234-123456789012",
+        "description": "Test suite for Real Estate Listings API",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Add Listing",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json",
+                        "type": "text"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\"title\": \"Beautiful House\", \"price\": 100000, \"description\": \"A beautiful house in the suburbs.\"}"
+                },
+                "url": {
+                    "raw": "http://localhost:3000/api/listings",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000",
+                    "path": [
+                        "api",
+                        "listings"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Get Listings",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:3000/api/listings",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000",
+                    "path": [
+                        "api",
+                        "listings"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Delete Listing",
+            "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:3000/api/listings/{{listingId}}",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000",
+                    "path": [
+                        "api",
+                        "listings",
+                        "{{listingId}}"
+                    ],
+                    "variable": [
+                        {
+                            "key": "listingId",
+                            "value": "REPLACE_WITH_LISTING_ID"
+                        }
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Add Listing - Invalid Data",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json",
+                        "type": "text"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\"title\": \"Incomplete Listing\"}"
+                },
+                "url": {
+                    "raw": "http://localhost:3000/api/listings",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000",
+                    "path": [
+                        "api",
+                        "listings"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Delete Listing - Non-existent ID",
+            "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:3000/api/listings/non-existent-id",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000",
+                    "path": [
+                        "api",
+                        "listings",
+                        "non-existent-id"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Add Listing - Invalid Price",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json",
+                        "type": "text"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\"title\": \"Invalid Price Listing\", \"price\": \"not-a-number\", \"description\": \"A listing with an invalid price.\"}"
+                },
+                "url": {
+                    "raw": "http://localhost:3000/api/listings",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000",
+                    "path": [
+                        "api",
+                        "listings"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Delete Listing - Invalid ID Format",
+            "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:3000/api/listings/123",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000",
+                    "path": [
+                        "api",
+                        "listings",
+                        "123"
+                    ]
+                }
+            },
+            "response": []
+        }
+    ]
+}

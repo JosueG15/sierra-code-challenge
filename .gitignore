@@ -1,0 +1,37 @@
+# Node.js
+node_modules
+npm-debug.log*
+
+# Compiled binary addons (https://nodejs.org/api/addons.html)
+build/Release
+
+# IDEs
+.idea/
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+*.sublime-project
+*.code-workspace
+.vscode/
+.vscode-test/
+.vscode-insiders/
+
+# Miscellaneous
+*.log
+*.sql
+*.sqlite
+*.csv
+*.pdf
+*.zip
+*.cache
+
+# Compiled TypeScript files
+dist/
+build/
+
+# Log Files
+logs/
+*.log
