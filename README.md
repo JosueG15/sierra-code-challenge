@@ -15,20 +15,14 @@ This is a simple RESTful API built with TypeScript and Node.js to manage a small
 1. **Clone the repository:**
 
    ```sh
-   git clone https://github.com/yourusername/real-estate-listings-api.git
-   cd real-estate-listings-api
+   git clone https://github.com//JosueG15/sierra-code-challenge.git
+   cd sierra-code-challenge
    ```
 
 2. **Install dependencies:**
 
    ```sh
    npm install
-   ```
-
-3. **Create a `.env` file** (optional, for environment-specific settings):
-
-   ```sh
-   touch .env
    ```
 
 ## Setup Redis
